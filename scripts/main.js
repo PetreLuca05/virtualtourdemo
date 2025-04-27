@@ -1,4 +1,4 @@
-import './style.css'
+import '../style.css'
 import * as THREE from 'three'
 import {spawnPanorama, init} from './panorama.js'
 import image1 from '../images/pano1.jpg'
