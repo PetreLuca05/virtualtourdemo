@@ -3848,10 +3848,10 @@ void main() {
   </canvas>
 
   <nav> 
-    <h1>pv</h1>
-    <p id = "testbtn" >en</p>
+    <h1>preview</h1>
+    <p id = "testbtn" >O</p>
   </nav>
 
   <ul id="rooms">
   </ul>
-`;const So=new hc,Mi=new Ct(75,window.innerWidth/window.innerHeight,.1,1e3),tr=new rr(Mi),cr=new sp({canvas:document.querySelector("#bg"),alpha:!0,antialias:!0});cr.setPixelRatio(window.devicePixelRatio);cr.setSize(window.innerWidth,window.innerHeight);Mi.position.setZ(30);lp(So);hp();function hp(){for(var i=JSON.parse(JSON.stringify(cp)),e=0;e<i.length;e++){console.log(i[e].name);const t=document.createElement("button");t.innerHTML=i[e].name;const n=dp(i[e].image);t.style.backgroundImage=`url('${n}')`,t.addEventListener("click",()=>{Xa(`${n}`)}),Xa(up),document.querySelector("#rooms").appendChild(t)}}document.querySelector("#testbtn").addEventListener("click",()=>{fp()});function fp(){tr.connect(),tr.update(),tr.enabled=!0,console.log("DeviceOrientationControls started"),alert("DeviceOrientationControls started")}function Eo(){window.requestAnimationFrame(Eo),tr.update(),cr.render(So,Mi)}window.addEventListener("resize",()=>{Mi.aspect=window.innerWidth/window.innerHeight,Mi.updateProjectionMatrix(),cr.setSize(window.innerWidth,window.innerHeight)});function dp(i){return new URL(Object.assign({"../images/pano1.jpg":Co,"../images/pano2.jpg":Po,"../images/pano3.png":Do})[`../images/${i}`],import.meta.url).href}Eo();
+`;const So=new hc,Mi=new Ct(75,window.innerWidth/window.innerHeight,.1,1e3),tr=new rr(Mi),cr=new sp({canvas:document.querySelector("#bg"),alpha:!0,antialias:!0});cr.setPixelRatio(window.devicePixelRatio);cr.setSize(window.innerWidth,window.innerHeight);Mi.position.setZ(30);lp(So);hp();function hp(){for(var i=JSON.parse(JSON.stringify(cp)),e=0;e<i.length;e++){console.log(i[e].name);const t=document.createElement("button");t.innerHTML=`<p>${i[e].name}</p>`;const n=dp(i[e].image);t.style.backgroundImage=`url('${n}')`,t.addEventListener("click",()=>{Xa(`${n}`)}),Xa(up),document.querySelector("#rooms").appendChild(t)}}document.querySelector("#testbtn").addEventListener("click",()=>{fp()});function fp(){tr.connect(),tr.update(),tr.enabled=!0,console.log("DeviceOrientationControls started"),alert("DeviceOrientationControls started")}function Eo(){window.requestAnimationFrame(Eo),tr.update(),cr.render(So,Mi)}window.addEventListener("resize",()=>{Mi.aspect=window.innerWidth/window.innerHeight,Mi.updateProjectionMatrix(),cr.setSize(window.innerWidth,window.innerHeight)});function dp(i){return new URL(Object.assign({"../images/pano1.jpg":Co,"../images/pano2.jpg":Po,"../images/pano3.png":Do})[`../images/${i}`],import.meta.url).href}Eo();
